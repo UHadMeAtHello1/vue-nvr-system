@@ -1,0 +1,422 @@
+/* 云台控制按钮样式 - 完整修改版 */
+  .rightBox {
+    .controlMenuBox {
+      width: 100%;
+      border-bottom: 1px solid var(--bgColor4);
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-bottom: 20px;
+
+      li {
+        margin: 0 10px;
+        padding: 10px 0px;
+        font-size: 14px;
+        color: var(--themeColor);
+        cursor: pointer;
+      }
+
+      .activeLi {
+        border-bottom: 2px solid var(--themeColor);
+      }
+    }
+
+    .controlInner {
+      width: 100%;
+      display: none;
+      text-align: start;
+
+      .bigBoySpan {
+        width: 50%;
+        height: 30px;
+        line-height: 30px;
+        margin: 0 0 10px 0;
+
+        em {
+          display: inline-block;
+          width: 100px;
+          text-align: right;
+          // margin-right: 14px;
+          font-size: 14px;
+        }
+
+        select,
+        input {
+          width: 160px;
+          height: 30px;
+          background: var(--inputBg);
+          border: 1px solid var(--inputBorder);
+          padding-left: 10px;
+          border-radius: 4px;
+          color: white;
+
+          option {
+            background-color: var(--bgColor2);
+          }
+
+          option:hover {
+            background-color: var(--themeColor);
+          }
+        }
+      }
+
+      p {
+        width: 100%;
+        height: 30px;
+        text-align: right;
+        margin-top: 20px;
+        // padding-right: 60px;
+
+        button {
+          height: 30px;
+          width: 80px;
+          margin: 0;
+          background-color: var(--btnBgColor);
+          border-radius: 4px;
+          color: white;
+        }
+      }
+    }
+  }
+.url-item.selected{
+  background-color:var(--btnBgColor2)
+}
+.playback-url-list{
+  overflow-y: auto;
+  height: 330px;
+  display: flex;
+  flex-direction: column; 
+  background-color: var(--bgColor);
+}
+.playbackVideoContainer{
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin-top: 0 !important;
+  z-index: 999 !important;
+}
+.playbackChoose {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.playback-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.video-window {
+  width: 400px;
+  height: 300px;
+  background: #000;
+  margin-top: 10px;
+}
+.playbackControls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 确保云台控制器在右侧控制面板中正确显示 */
+.right-control .pie {
+  margin: 20px auto;
+}
+
+/* 摄像头类型标题样式 */
+.camera-type-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--primaryColor);
+  margin-bottom: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--inputBorder);
+}
+
+/* 右侧控制栏标签页按钮样式 */
+.title span {
+  background: var(--btnBgColor);
+  border: 1px solid var(--inputBorder);
+  // color: var(--textColor);
+  padding: 4px 8px;
+  margin: 0 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.title span:hover {
+  background: var(--btnHoverBgColor);
+  border-color: var(--primaryColor);
+}
+
+.title span.active {
+  background: var(--themeColor);
+  color: #fff;
+  border-color: var(--themeColor);
+}
+
+/* 控制标签页内容样式 */
+.control-tab-content {
+  padding-top: 10px;
+}
+
+/* 舱内摄像头云台控制提示样式 */
+.no-ptz-tip {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--textColorSecondary);
+  font-size: 14px;
+}
+.pie {
+  position: relative;
+  margin: 20px auto;
+  padding: 0;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  list-style: none;
+  overflow: hidden;
+  background: var(--bgColor);
+  // border: 2px solid var(--formBgBorder);
+  box-shadow: 0 0 0 var(--boxShadow);
+  }
+.center-out{
+    position: absolute;
+    background-color: var(--bgColor);
+    border-radius: 50%;
+    top: 62px;
+    left: 62px;
+    width: 120px;
+    height: 120px;
+}
+.center {
+  position: absolute;
+  width: 95px;
+  height: 95px;
+  top: 12.5px;
+  left: 12.5px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid var(--bgColor4);
+  background-image: url(../imgs/monitor/video-start.png);
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.center:hover {
+  background-color: white;
+  // box-shadow: 0 0 8px var(--themeColor);
+}
+
+  .split-one{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px 0 0 0;
+    float: left;
+  }
+
+
+  .split-one img {
+    margin-top: 20px;
+    margin-left: 8px;
+    height: 20px;
+    width: 20px;
+  }
+
+  .split-two{
+    width: 50px;
+    height: 50px;
+    border-radius: 0 50px 0 0;
+    float: right;
+  }
+  .split-two img {
+    margin-top: 20px;
+    margin-left: 8px;
+    height: 20px;
+    width: 20px;
+  }
+
+  .split-three{
+    width: 50px;
+    height: 50px;
+    border-radius: 0 0 0 50px;
+    float: left;
+    padding-top: 12px;
+    padding-left: 15px;
+    font-weight: 500;
+    color: #0f1214; 
+  }
+
+  .split-four{
+    width: 50px;
+    height: 50px;
+    border-radius: 0 0 50px 0;
+    float: left;
+    padding-top: 12px;
+    padding-left: 8px;
+    color: #0f1214;
+  }
+/* 基础切片样式定义 */
+.slice {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  -webkit-transform-origin: 0% 100%; /* 添加浏览器前缀 */
+  -ms-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
+  cursor: pointer;
+  border: 1px solid #0F2140; /* 具体颜色值 */
+  box-shadow: 0 1px 0 #0F2140 inset, 0 1px 5px #0F2140;
+  background-color: #1991c2; /* 明确的背景色作为fallback */
+}
+
+/* 为所有切片添加统一背景颜色 */
+.slice-one, .slice-two, .slice-three, .slice-four,
+.slice-five, .slice-six, .slice-seven, .slice-eight {
+  background-color: #0f2041; /* 保持原有切片背景色 */
+}
+
+/* 切片变换样式 - 全部添加浏览器前缀 */
+.slice-one {
+  -webkit-transform: rotate(-22.5deg) skewY(-45deg);
+  -ms-transform: rotate(-22.5deg) skewY(-45deg);
+  transform: rotate(-22.5deg) skewY(-45deg);
+}
+
+.slice-two {
+  -webkit-transform: rotate(22.5deg) skewY(-45deg);
+  -ms-transform: rotate(22.5deg) skewY(-45deg);
+  transform: rotate(22.5deg) skewY(-45deg);
+}
+
+.slice-three {
+  -webkit-transform: rotate(67.5deg) skewY(-45deg);
+  -ms-transform: rotate(67.5deg) skewY(-45deg);
+  transform: rotate(67.5deg) skewY(-45deg);
+}
+
+.slice-four {
+  -webkit-transform: rotate(112.5deg) skewY(-45deg);
+  -ms-transform: rotate(112.5deg) skewY(-45deg);
+  transform: rotate(112.5deg) skewY(-45deg);
+}
+
+.slice-five {
+  -webkit-transform: rotate(157.5deg) skewY(-45deg);
+  -ms-transform: rotate(157.5deg) skewY(-45deg);
+  transform: rotate(157.5deg) skewY(-45deg);
+}
+
+.slice-six {
+  -webkit-transform: rotate(202.5deg) skewY(-45deg);
+  -ms-transform: rotate(202.5deg) skewY(-45deg);
+  transform: rotate(202.5deg) skewY(-45deg);
+}
+
+.slice-seven {
+  -webkit-transform: rotate(247.5deg) skewY(-45deg);
+  -ms-transform: rotate(247.5deg) skewY(-45deg);
+  transform: rotate(247.5deg) skewY(-45deg);
+}
+
+.slice-eight {
+  -webkit-transform: rotate(292.5deg) skewY(-45deg);
+  -ms-transform: rotate(292.5deg) skewY(-45deg);
+  transform: rotate(292.5deg) skewY(-45deg);
+}
+
+/* 切片图片样式 */
+.slice img {
+  -webkit-transform: skewY(45deg) rotate(22.5deg);
+  -ms-transform: skewY(45deg) rotate(22.5deg);
+  transform: skewY(45deg) rotate(22.5deg);
+  position: absolute;
+  top: 52px;
+  left: 28px;
+  height: 16px;
+  width: 16px;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+/* 悬浮效果样式 */
+.slice:hover {
+  background-color: #1991c2; /* 保持原有悬浮背景色 */
+}
+
+/* 禁用状态样式 - 更明确清晰 */
+.slice.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: #0c132e !important; /* 确保禁用状态下背景色一致 */
+}
+
+/* 圆形容器样式 */
+.pie {
+  position: relative;
+  margin: 20px auto;
+  padding: 0;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  list-style: none;
+  overflow: hidden;
+  background: #0c132e; /* 具体背景色 */
+  border: 2px solid #0F2140; /* 具体边框颜色 */
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.1); /* 简化的阴影效果 */
+}
+
+/* 中心外部区域样式 */
+.center-out {
+  position: absolute;
+  background-color: #0c132e; /* 具体背景色 */
+  border-radius: 50%;
+  top: 62px;
+  left: 62px;
+  width: 120px;
+  height: 120px;
+}
+
+/* 中心按钮样式 */
+.center {
+  position: absolute;
+  width: 95px;
+  height: 95px;
+  top: 12.5px;
+  left: 12.5px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid #1991c2; /* 具体边框颜色 */
+  background-image: url(../imgs/monitor/video-start.png);
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease; /* 添加过渡效果前缀 */
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* 确保activeControlInner类优先显示 */
+.activeControlInner {
+  z-index: 1001;
+  background-color: #0c132e !important; /* 使用原主题色 */
+}
+
+/* 统一切片边框和阴影样式 */
+.slice {
+  border: 2px solid #0c132e; /* 统一边框颜色 */
+  box-shadow: 0 1px 0 #1991c2 inset, 0 1px 5px rgba(15, 33, 64, 0.5); /* 半透明阴影增强效果 */
+}
